@@ -1,6 +1,6 @@
 extends GutTest
 
-const UI_IMAGES := ["momo", "star", "album", "lock", "arrow_left", "arrow_right", "learn", "play", "parent", "apple",
+const UI_IMAGES := ["momo", "star", "album", "lock", "arrow_left", "arrow_right", "learn", "play", "parent", "apple", "back",
 	"outfit_crown", "outfit_top_hat", "outfit_cap", "outfit_sunglasses", "outfit_bow", "outfit_grad_cap",
 	"outfit_flower", "outfit_helmet"]
 const SFX := ["clap", "pop", "confetti", "whoosh", "boop"]

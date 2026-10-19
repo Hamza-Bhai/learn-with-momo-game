@@ -13,6 +13,9 @@ config/quit_on_go_back=false
 
 ContentDB="*res://scripts/core/content_db.gd"
 Progress="*res://scripts/core/progress_service.gd"
+Voice="*res://scripts/core/voice.gd"
+Nav="*res://scripts/core/nav.gd"
+TimerService="*res://scripts/core/timer_service.gd"
 
 [display]
 
@@ -27,6 +30,8 @@ window/handheld/orientation=0
 enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 [rendering]
+
+textures/canvas_textures/default_texture_filter=3
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

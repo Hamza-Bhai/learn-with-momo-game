@@ -6,5 +6,5 @@
   {"id": "sea_animals", "name": "Sea Animals", "icon_item": "whale", "outfit": "bow", "unlock_after": null},
   {"id": "reptiles", "name": "Reptiles", "icon_item": "crocodile", "outfit": "grad_cap", "unlock_after": null},
   {"id": "flowers", "name": "Flowers", "icon_item": "sunflower", "outfit": "flower", "unlock_after": null},
-  {"id": "body_parts", "name": "Body Parts", "icon_item": "nose", "outfit": "helmet", "unlock_after": null}
+  {"id": "body_parts", "name": "Body Parts", "icon_item": "hand", "outfit": "helmet", "unlock_after": null}
 ]

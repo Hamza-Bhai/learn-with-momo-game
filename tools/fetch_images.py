@@ -14,7 +14,7 @@ BASE = "https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/%s.svg"
 
 UI = {
     "momo": "🐵", "star": "⭐", "album": "📒", "lock": "🔒", "arrow_left": "⬅️", "arrow_right": "➡️",
-    "learn": "📖", "play": "▶️", "parent": "⚙️", "apple": "🍎",
+    "learn": "📖", "play": "▶️", "parent": "⚙️", "apple": "🍎", "back": "🏠",
     "outfit_crown": "👑", "outfit_top_hat": "🎩", "outfit_cap": "🧢", "outfit_sunglasses": "🕶️",
     "outfit_bow": "🎀", "outfit_grad_cap": "🎓", "outfit_flower": "🌸", "outfit_helmet": "⛑️",
 }

@@ -16,6 +16,7 @@ func _ready() -> void:
 	timer = PlayTimer.new(Progress.store.timer_state(), int(Progress.store.settings().limit_minutes))
 	timer.tick(0.0, _today())
 	_was_up = timer.is_time_up()
+	time_up.connect(_on_time_up)
 
 
 func _process(delta: float) -> void:
@@ -67,3 +68,10 @@ func _save() -> void:
 
 func _today() -> String:
 	return Time.get_date_string_from_system()
+
+
+func _on_time_up() -> void:
+	var scene := get_tree().current_scene
+	if scene and scene.scene_file_path == Nav.PARENTS:
+		return  # a parent is already here and can add time
+	Nav.go_root(Nav.TIME_UP)
