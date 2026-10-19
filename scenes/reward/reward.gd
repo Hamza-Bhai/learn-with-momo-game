@@ -29,6 +29,7 @@ func _ready() -> void:
 
 	if result.sticker != "":
 		await _fly_sticker(ContentDB.item(result.sticker), album)
+		_stars()
 		Voice.play("got_sticker")
 		momo.dance()
 	else:

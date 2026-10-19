@@ -32,9 +32,9 @@ func _ready() -> void:
 			b.anchor_left = 1.0
 			b.anchor_right = 1.0
 			b.offset_left = -150
+			b.offset_right = -30
 		else:
 			b.offset_left = 30
-			b.offset_top = 20
 		b.tapped.connect(func(): _show(_page + dir))
 		add_child(b)
 

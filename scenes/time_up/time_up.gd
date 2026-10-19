@@ -28,6 +28,7 @@ func _ready() -> void:
 	parent_btn.anchor_left = 1.0
 	parent_btn.anchor_right = 1.0
 	parent_btn.offset_left = -96
+	parent_btn.offset_right = -32
 	parent_btn.offset_top = 24
 	parent_btn.tapped.connect(func(): Nav.go(Nav.PARENTS))
 	add_child(parent_btn)
