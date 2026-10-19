@@ -1,0 +1,6 @@
+.godot/
+*.apk
+*.wav
+tools/.venv/
+build/
+.superpowers/
