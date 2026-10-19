@@ -1,0 +1,38 @@
+[
+  {
+    "id": "rose",
+    "name": "rose",
+    "emoji": "🌹",
+    "avoid_with": []
+  },
+  {
+    "id": "sunflower",
+    "name": "sunflower",
+    "emoji": "🌻",
+    "avoid_with": []
+  },
+  {
+    "id": "tulip",
+    "name": "tulip",
+    "emoji": "🌷",
+    "avoid_with": []
+  },
+  {
+    "id": "lotus",
+    "name": "lotus",
+    "emoji": "🪷",
+    "avoid_with": []
+  },
+  {
+    "id": "hibiscus",
+    "name": "hibiscus",
+    "emoji": "🌺",
+    "avoid_with": []
+  },
+  {
+    "id": "cherry_blossom",
+    "name": "cherry blossom",
+    "emoji": "🌸",
+    "avoid_with": []
+  }
+]

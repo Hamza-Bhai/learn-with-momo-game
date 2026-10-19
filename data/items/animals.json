@@ -1,0 +1,66 @@
+[
+  {
+    "id": "cat",
+    "name": "cat",
+    "emoji": "🐈",
+    "avoid_with": []
+  },
+  {
+    "id": "dog",
+    "name": "dog",
+    "emoji": "🐕",
+    "avoid_with": []
+  },
+  {
+    "id": "cow",
+    "name": "cow",
+    "emoji": "🐄",
+    "avoid_with": []
+  },
+  {
+    "id": "horse",
+    "name": "horse",
+    "emoji": "🐎",
+    "avoid_with": []
+  },
+  {
+    "id": "sheep",
+    "name": "sheep",
+    "emoji": "🐑",
+    "avoid_with": [
+      "goat"
+    ]
+  },
+  {
+    "id": "goat",
+    "name": "goat",
+    "emoji": "🐐",
+    "avoid_with": [
+      "sheep"
+    ]
+  },
+  {
+    "id": "chicken",
+    "name": "chicken",
+    "emoji": "🐔",
+    "avoid_with": []
+  },
+  {
+    "id": "lion",
+    "name": "lion",
+    "emoji": "🦁",
+    "avoid_with": []
+  },
+  {
+    "id": "elephant",
+    "name": "elephant",
+    "emoji": "🐘",
+    "avoid_with": []
+  },
+  {
+    "id": "monkey",
+    "name": "monkey",
+    "emoji": "🐒",
+    "avoid_with": []
+  }
+]

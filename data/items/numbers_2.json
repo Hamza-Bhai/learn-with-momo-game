@@ -1,0 +1,62 @@
+[
+  {
+    "id": "n11",
+    "name": "eleven",
+    "number": 11,
+    "avoid_with": []
+  },
+  {
+    "id": "n12",
+    "name": "twelve",
+    "number": 12,
+    "avoid_with": []
+  },
+  {
+    "id": "n13",
+    "name": "thirteen",
+    "number": 13,
+    "avoid_with": []
+  },
+  {
+    "id": "n14",
+    "name": "fourteen",
+    "number": 14,
+    "avoid_with": []
+  },
+  {
+    "id": "n15",
+    "name": "fifteen",
+    "number": 15,
+    "avoid_with": []
+  },
+  {
+    "id": "n16",
+    "name": "sixteen",
+    "number": 16,
+    "avoid_with": []
+  },
+  {
+    "id": "n17",
+    "name": "seventeen",
+    "number": 17,
+    "avoid_with": []
+  },
+  {
+    "id": "n18",
+    "name": "eighteen",
+    "number": 18,
+    "avoid_with": []
+  },
+  {
+    "id": "n19",
+    "name": "nineteen",
+    "number": 19,
+    "avoid_with": []
+  },
+  {
+    "id": "n20",
+    "name": "twenty",
+    "number": 20,
+    "avoid_with": []
+  }
+]

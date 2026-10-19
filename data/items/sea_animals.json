@@ -1,0 +1,57 @@
+[
+  {
+    "id": "fish",
+    "name": "fish",
+    "emoji": "🐟",
+    "avoid_with": []
+  },
+  {
+    "id": "whale",
+    "name": "whale",
+    "emoji": "🐋",
+    "avoid_with": [
+      "dolphin"
+    ]
+  },
+  {
+    "id": "dolphin",
+    "name": "dolphin",
+    "emoji": "🐬",
+    "avoid_with": [
+      "whale",
+      "shark"
+    ]
+  },
+  {
+    "id": "octopus",
+    "name": "octopus",
+    "emoji": "🐙",
+    "avoid_with": []
+  },
+  {
+    "id": "shark",
+    "name": "shark",
+    "emoji": "🦈",
+    "avoid_with": [
+      "dolphin"
+    ]
+  },
+  {
+    "id": "crab",
+    "name": "crab",
+    "emoji": "🦀",
+    "avoid_with": []
+  },
+  {
+    "id": "seal",
+    "name": "seal",
+    "emoji": "🦭",
+    "avoid_with": []
+  },
+  {
+    "id": "jellyfish",
+    "name": "jellyfish",
+    "emoji": "🪼",
+    "avoid_with": []
+  }
+]

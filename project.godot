@@ -9,6 +9,10 @@ run/main_scene="res://scenes/home/home.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/quit_on_go_back=false
 
+[autoload]
+
+ContentDB="*res://scripts/core/content_db.gd"
+
 [display]
 
 window/size/viewport_width=1280

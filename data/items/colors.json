@@ -1,0 +1,12 @@
+[
+  {"id": "red", "name": "red", "color": "#E53935", "avoid_with": ["pink", "orange"]},
+  {"id": "blue", "name": "blue", "color": "#1E88E5", "avoid_with": ["purple"]},
+  {"id": "yellow", "name": "yellow", "color": "#FDD835", "avoid_with": ["orange"]},
+  {"id": "green", "name": "green", "color": "#43A047", "avoid_with": []},
+  {"id": "orange", "name": "orange", "color": "#FB8C00", "avoid_with": ["red", "yellow"]},
+  {"id": "purple", "name": "purple", "color": "#8E24AA", "avoid_with": ["blue", "pink"]},
+  {"id": "pink", "name": "pink", "color": "#F48FB1", "avoid_with": ["red", "purple"]},
+  {"id": "black", "name": "black", "color": "#212121", "avoid_with": ["brown"]},
+  {"id": "white", "name": "white", "color": "#FAFAFA", "avoid_with": []},
+  {"id": "brown", "name": "brown", "color": "#6D4C41", "avoid_with": ["black"]}
+]

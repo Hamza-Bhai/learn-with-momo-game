@@ -1,0 +1,70 @@
+[
+  {
+    "id": "eye",
+    "name": "eye",
+    "emoji": "👁️",
+    "avoid_with": []
+  },
+  {
+    "id": "ear",
+    "name": "ear",
+    "emoji": "👂",
+    "avoid_with": []
+  },
+  {
+    "id": "nose",
+    "name": "nose",
+    "emoji": "👃",
+    "avoid_with": []
+  },
+  {
+    "id": "mouth",
+    "name": "mouth",
+    "emoji": "👄",
+    "avoid_with": [
+      "tongue"
+    ]
+  },
+  {
+    "id": "tooth",
+    "name": "tooth",
+    "emoji": "🦷",
+    "avoid_with": []
+  },
+  {
+    "id": "tongue",
+    "name": "tongue",
+    "emoji": "👅",
+    "avoid_with": [
+      "mouth"
+    ]
+  },
+  {
+    "id": "hand",
+    "name": "hand",
+    "emoji": "✋",
+    "avoid_with": []
+  },
+  {
+    "id": "foot",
+    "name": "foot",
+    "emoji": "🦶",
+    "avoid_with": [
+      "leg"
+    ]
+  },
+  {
+    "id": "leg",
+    "name": "leg",
+    "emoji": "🦵",
+    "avoid_with": [
+      "foot"
+    ]
+  },
+  {
+    "id": "hair",
+    "name": "hair",
+    "emoji": "💇",
+    "avoid_with": []
+  }
+]

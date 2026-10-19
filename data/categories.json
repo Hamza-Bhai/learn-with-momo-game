@@ -1,0 +1,10 @@
+[
+  {"id": "colors", "name": "Colors", "icon_item": "red", "outfit": "crown", "unlock_after": null},
+  {"id": "numbers_1", "name": "Numbers", "icon_item": "n3", "outfit": "top_hat", "unlock_after": null},
+  {"id": "numbers_2", "name": "More Numbers", "icon_item": "n15", "outfit": "cap", "unlock_after": "numbers_1"},
+  {"id": "animals", "name": "Animals", "icon_item": "lion", "outfit": "sunglasses", "unlock_after": null},
+  {"id": "sea_animals", "name": "Sea Animals", "icon_item": "whale", "outfit": "bow", "unlock_after": null},
+  {"id": "reptiles", "name": "Reptiles", "icon_item": "crocodile", "outfit": "grad_cap", "unlock_after": null},
+  {"id": "flowers", "name": "Flowers", "icon_item": "sunflower", "outfit": "flower", "unlock_after": null},
+  {"id": "body_parts", "name": "Body Parts", "icon_item": "nose", "outfit": "helmet", "unlock_after": null}
+]

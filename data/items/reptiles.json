@@ -1,0 +1,32 @@
+[
+  {
+    "id": "snake",
+    "name": "snake",
+    "emoji": "🐍",
+    "avoid_with": []
+  },
+  {
+    "id": "lizard",
+    "name": "lizard",
+    "emoji": "🦎",
+    "avoid_with": []
+  },
+  {
+    "id": "crocodile",
+    "name": "crocodile",
+    "emoji": "🐊",
+    "avoid_with": []
+  },
+  {
+    "id": "turtle",
+    "name": "turtle",
+    "emoji": "🐢",
+    "avoid_with": []
+  },
+  {
+    "id": "dinosaur",
+    "name": "dinosaur",
+    "emoji": "🦖",
+    "avoid_with": []
+  }
+]
