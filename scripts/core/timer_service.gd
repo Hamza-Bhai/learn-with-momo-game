@@ -17,6 +17,9 @@ func _ready() -> void:
 	timer.tick(0.0, _today())
 	_was_up = timer.is_time_up()
 	time_up.connect(_on_time_up)
+	# Reopening the app must not get around the limit.
+	if _was_up:
+		_on_time_up.call_deferred()
 
 
 func _process(delta: float) -> void:
