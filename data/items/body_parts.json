@@ -65,6 +65,8 @@
     "id": "hair",
     "name": "hair",
     "emoji": "💇",
-    "avoid_with": []
+    "avoid_with": [],
+    "this": "This is hair.",
+    "where": "Where is the hair?"
   }
 ]
