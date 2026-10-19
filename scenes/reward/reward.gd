@@ -29,6 +29,8 @@ func _ready() -> void:
 
 	if result.sticker != "":
 		await _fly_sticker(ContentDB.item(result.sticker), album)
+		if not is_inside_tree():
+			return
 		_stars()
 		Voice.play("got_sticker")
 		momo.dance()
@@ -38,6 +40,8 @@ func _ready() -> void:
 		momo.dance()
 	if result.outfit != "":
 		await get_tree().create_timer(1.6).timeout
+		if not is_inside_tree():
+			return
 		Progress.store.set_worn_outfit(result.outfit)
 		Progress.store.save()
 		momo.wear(result.outfit)
@@ -46,7 +50,8 @@ func _ready() -> void:
 		Voice.play("new_outfit")
 		momo.dance()
 	await get_tree().create_timer(1.0).timeout
-	_can_leave = true
+	if is_inside_tree():
+		_can_leave = true
 
 
 func _gui_input(event: InputEvent) -> void:

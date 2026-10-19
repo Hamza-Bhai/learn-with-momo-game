@@ -2,6 +2,7 @@ extends Control
 ## Time is up for today. Only a parent (through the sum question) can open the game again.
 
 var blocks_back := true
+var _leaving := false
 
 
 func _ready() -> void:
@@ -32,3 +33,10 @@ func _ready() -> void:
 	parent_btn.offset_top = 24
 	parent_btn.tapped.connect(func(): Nav.go(Nav.PARENTS))
 	add_child(parent_btn)
+
+
+func _process(_delta: float) -> void:
+	# A new day (or a parent raising the limit) opens the game again by itself.
+	if not _leaving and not TimerService.is_time_up():
+		_leaving = true
+		Nav.go_root(Nav.HOME)

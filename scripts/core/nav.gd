@@ -21,6 +21,7 @@ var _history: Array = []  # [{path, params}]
 var _current := {"path": HOME, "params": {}}
 var _busy := false
 var _fade := ColorRect.new()
+var _tween: Tween
 
 
 func _ready() -> void:
@@ -81,7 +82,10 @@ func _switch(path: String, p: Dictionary) -> void:
 	_busy = true
 	_current = {"path": path, "params": p}
 	Voice.stop()
+	if _tween:
+		_tween.kill()  # a newer switch (e.g. time-up) wins over one still fading
 	var t := create_tween()
+	_tween = t
 	t.tween_property(_fade, "color:a", 1.0, FADE)
 	t.tween_callback(func():
 		_params = p
