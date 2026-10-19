@@ -14,3 +14,18 @@ Offline Android learning game (English words: colors, numbers, animals, sea anim
 ```bash
 /d/Tools/Godot/Godot_v4.7.2-stable_win64_console.exe --headless --path . -s addons/gut/gut_cmdln.gd -gdir=res://tests/unit -gexit
 ```
+
+## Build the Android APK
+
+Export templates for 4.7.2 live in `%APPDATA%\Godot\export_templates\4.7.2.stable`. The APK is signed with the local debug key `D:\Tools\android-debug.keystore` (sideload only, not for Play Store).
+
+```bash
+export GODOT_ANDROID_KEYSTORE_RELEASE_PATH="D:/Tools/android-debug.keystore" GODOT_ANDROID_KEYSTORE_RELEASE_USER=androiddebugkey GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD=android
+/d/Tools/Godot/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release "Android" build/learn-with-momo.apk
+```
+
+Output: `build/learn-with-momo.apk` (~56 MB: arm64 + armv7 engine ~50 MB, game content ~4 MB). No permissions, landscape, Android 7+.
+
+## Install on a phone
+
+Copy the APK to the phone (USB / WhatsApp to yourself), open it, allow "Install unknown apps" for that app once.
