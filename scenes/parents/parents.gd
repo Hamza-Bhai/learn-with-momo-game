@@ -132,5 +132,6 @@ func _text_button(text: String, font_size: int, min_size: Vector2, selected := f
 
 
 func _credits_text() -> String:
-	return "Pictures: Twemoji (CC-BY 4.0) by Twitter, Inc. and contributors. " \
+	return "Game by Hamza Pervaiz (hamzapervaiz276@gmail.com). " \
+		+ "Pictures: Twemoji (CC-BY 4.0) by Twitter, Inc. and contributors. " \
 		+ "Voice: Piper TTS. Made with Godot Engine."
