@@ -1,5 +1,5 @@
 extends Control
-## Play (Khelo): "Where is the turtle?" with 2-3 pictures. Right = party, wrong = try again.
+## Play: "Where is the turtle?" with 2-3 pictures. Right = party, wrong = try again.
 
 const CELEBRATE_SEC := 1.2
 const PRAISE := ["great_job", "well_done", "yay"]

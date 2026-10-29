@@ -1,5 +1,5 @@
 extends Control
-## Learn (Seekho): one picture at a time with its English name. Never moves on by itself.
+## Learn: one picture at a time with its English name. Never moves on by itself.
 
 var _items: Array
 var _index := 0

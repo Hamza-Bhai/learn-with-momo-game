@@ -1,5 +1,5 @@
 extends Control
-## Category: two big choices, Learn (Seekho) and Play (Khelo).
+## Category: two big choices, Learn and Play.
 
 var _category: Dictionary
 

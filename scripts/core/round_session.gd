@@ -1,6 +1,6 @@
 class_name RoundSession
 extends RefCounted
-## One Khelo round: a fixed list of target items, each asked with 2-3 picture options.
+## One Play round: a fixed list of target items, each asked with 2-3 picture options.
 ## After a correct answer the session locks until unlock(), so toddler double taps
 ## during the celebration never count twice.
 

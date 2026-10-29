@@ -17,8 +17,8 @@
 - Fully offline: no INTERNET permission, no ads, no purchases, no outbound links, no analytics.
 - No screen requires reading; every button speaks its name on tap.
 - Wrong answer = wiggle + "Try again!" only. No buzzer, no red X, no score loss, no sad Momo.
-- Nothing auto-advances in Seekho (no feed behaviour).
-- Khelo round = 5 questions; 2 options, rising to 3.
+- Nothing auto-advances in Learn (no feed behaviour).
+- Play round = 5 questions; 2 options, rising to 3.
 - Time limit options: Off / 10 / 15 / 20 / 30 min; daily total, resets at local midnight; counts only while the app is in the foreground.
 - Voice: pre-generated Piper TTS, slightly slow (length_scale 1.15), OGG Vorbis mono.
 - Downloads (Godot, export templates, JDK, Android SDK, GUT, piper voices, Twemoji, Kenney) need the user's explicit OK at execution time — ask once with the list.
@@ -29,7 +29,7 @@
 2. Missing or corrupt `user://save.json` (first run, phone killed mid-write) — expect defaults, no crash. → Task 5 `test_load_corrupt_file_gives_defaults`.
 3. Phone date/time changed backwards or forwards — expect timer never negative, new date resets, past date does not grant extra time beyond a reset. → Task 6 `test_clock_backwards_no_negative`.
 4. App sent to background (phone call, home button) — expect timer pauses and voice stops. → Task 6 `test_paused_does_not_accumulate` + Task 12 manual check.
-5. Android back button on time-up screen or in Khelo — expect it never unlocks time-up, and elsewhere goes one screen back (Home: ignored, no exit). → Task 12 manual check list.
+5. Android back button on time-up screen or in Play — expect it never unlocks time-up, and elsewhere goes one screen back (Home: ignored, no exit). → Task 12 manual check list.
 
 ---
 
@@ -124,7 +124,7 @@ Sentence rules (in `tools/gen_voice.py`): emoji item → "This is a {name}." / "
   - `test_numbers_1_is_one_to_ten` and `test_numbers_2_is_eleven_to_twenty` (by `number` field)
   - `test_avoid_with_refers_to_same_category_ids`
   - `test_every_category_has_outfit_and_icon_item_exists`
-  - `test_each_category_has_at_least_3_items` (Khelo needs 3 options)
+  - `test_each_category_has_at_least_3_items` (Play needs 3 options)
 - [ ] **Step 2:** Run test command. Expected: FAIL (ContentDB missing).
 - [ ] **Step 3:** Write the JSON files per the schema and spec §8; implement `content_db.gd` (loads all JSON in `_ready`, `FileAccess` + `JSON.parse_string`).
 - [ ] **Step 4:** Run tests. Expected: all pass.
@@ -149,7 +149,7 @@ Sentence rules (in `tools/gen_voice.py`): emoji item → "This is a {name}." / "
 - [ ] **Step 6:** Run tests. Expected: all pass. Check `du -sh assets` < 15 MB.
 - [ ] **Step 7:** Commit `feat: generated images, voice and sfx`.
 
-### Task 4: RoundSession (Khelo logic)
+### Task 4: RoundSession (Play logic)
 
 **Files:**
 - Create: `scripts/core/round_session.gd` (`class_name RoundSession extends RefCounted`)
@@ -247,20 +247,20 @@ Sentence rules (in `tools/gen_voice.py`): emoji item → "This is a {name}." / "
 - [ ] **Step 3:** Run unit tests — still all pass.
 - [ ] **Step 4:** Commit `feat: home screen, Momo and navigation`.
 
-### Task 9: Category screen + Seekho
+### Task 9: Category screen + Learn
 
 **Files:**
 - Create: `scenes/category/category.tscn/.gd`, `scenes/learn/learn.tscn/.gd`, `scenes/components/item_view.tscn/.gd`
 
 **Interfaces:**
 - `ItemView` (Control): `show_item(item: Dictionary)` — emoji → SVG texture; color → big rounded circle in that color; number → large numeral + `number` small apple icons in rows of 5.
-- Category: Seekho + Khelo BigButtons (`learn`, `play` voice keys), back arrow, Momo.
+- Category: Learn + Play BigButtons (`learn`, `play` voice keys), back arrow, Momo.
 - Learn: one ItemView center, plays `this_<id>` on show; tap item replays; left/right arrow buttons; no auto-advance; last item → right arrow returns to the first.
 
 - [ ] **Step 1:** Build. **Step 2:** Run in editor: walk through colors, numbers_1 (count audio matches apples), reptiles; confirm nothing advances by itself.
 - [ ] **Step 3:** Commit `feat: category and learn screens`.
 
-### Task 10: Khelo + Reward screens
+### Task 10: Play + Reward screens
 
 **Files:**
 - Create: `scenes/play/play.tscn/.gd`, `scenes/reward/reward.tscn/.gd`, `scenes/components/confetti.tscn` (CPUParticles2D — not GPU, for Compatibility renderer on 2GB phone)
@@ -289,11 +289,11 @@ Sentence rules (in `tools/gen_voice.py`): emoji item → "This is a {name}." / "
 - Create: `scenes/parents/parents.tscn/.gd`, `scenes/time_up/time_up.tscn/.gd`
 - Modify: `scripts/core/nav.gd` (back button), `scripts/core/timer_service.gd` (hook `time_up` → `Nav.go(time_up)`)
 
-- Parents: ParentGate first (wrong → new question, no lockout); then limit buttons Off/10/15/20/30 (current highlighted), "Aaj 10 minute aur" (+10 bonus), "Reset progress" with a second confirm, credits text from `CREDITS.md`.
+- Parents: ParentGate first (wrong → new question, no lockout); then limit buttons Off/10/15/20/30 (current highlighted), "10 more minutes today" (+10 bonus), "Reset progress" with a second confirm, credits text from `CREDITS.md`.
 - Time-up: calm background, Momo waves, plays `bye` once; only a small parent button → ParentGate → Parents.
 - Back button (`NOTIFICATION_WM_GO_BACK_REQUEST`, set `application/config/quit_on_go_back=false`): Home → ignore; Time-up → ignore; others → `Nav.back()`.
 
-- [ ] **Step 1:** Build. **Step 2:** Manual checks in editor with limit set to 1 min via a debug override: time-up appears mid-Khelo; back/escape does not leave time-up; gate + "10 minute aur" returns to Home; app minimise pauses timer (check `used_sec` in save before/after).
+- [ ] **Step 1:** Build. **Step 2:** Manual checks in editor with limit set to 1 min via a debug override: time-up appears mid-Play; back/escape does not leave time-up; gate + "10 more minutes" returns to Home; app minimise pauses timer (check `used_sec` in save before/after).
 - [ ] **Step 3:** Run unit tests — all pass.
 - [ ] **Step 4:** Commit `feat: parents area and time limit`.
 
